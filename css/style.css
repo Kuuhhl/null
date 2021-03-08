@@ -143,7 +143,6 @@ a {
 
 .show-search {
 	opacity: 1;
-	transition: opacity .1s ease-in;
 }
 
 .search-form__input {
