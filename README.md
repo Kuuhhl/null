@@ -1,5 +1,8 @@
 ![Preview](https://github.com/sadparadiseinhell/null/blob/main/assets/preview.png)
+# Disclaimer
+This is a modified version of the [startpage by sadparadiseinhell](https://github.com/sadparadiseinhell/null). 
 
+I am only using this repository to host the website.
 ## Features
 - **Dark/Light Theme** changes by pressing the :waning_crescent_moon: button. In the settings you can set your own colors for both themes
 - **Weather** displays temperature and description of weather conditions
