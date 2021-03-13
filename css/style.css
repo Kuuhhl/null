@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&family=IBM+Plex+Mono&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
-
 @import url('../css/sidebar.css');
 
 :root {
@@ -8,23 +7,23 @@
 	--roboto: 'Roboto', sans-serif;
 	--ibm-mono: 'IBM Plex Mono', monospace;
 
-	--inactive-icon: #BDBDBD;
+	--inactive-icon: #bdbdbd;
 	--theme-icon: #ffd37b;
 	--header-icon: #7ebebd;
 	--menu-icon: #dd7c85;
 }
 
-[theme="light"] {
+[theme='light'] {
 	--background: #f5f5f5;
 	--foreground: #404040;
-	--accent: #5E81AC;
+	--accent: #5e81ac;
 	--input: #d3d3d3;
 }
 
-[theme="dark"] {
+[theme='dark'] {
 	--background: #17171a;
 	--foreground: #91949c;
-	--accent: #81A1C1;
+	--accent: #81a1c1;
 	--input: #212125;
 }
 
@@ -43,7 +42,7 @@ body {
 	height: 100vh;
 	overflow: hidden;
 	font-size: 16px;
-	transition: all .5s, background-color .8s;
+	transition: all 0.5s, background-color 0.8s;
 }
 
 .container {
@@ -70,7 +69,7 @@ a {
 	margin: 25px;
 	font-size: 50px;
 	text-decoration: none;
-	transition: .5s;
+	transition: 0.5s;
 }
 
 .big-icons {
@@ -86,7 +85,7 @@ a {
 .main a:hover {
 	color: var(--accent);
 	transform: scale(1.2);
-	transition: .3s;
+	transition: 0.3s;
 }
 
 .header {
@@ -97,7 +96,7 @@ a {
 	font-size: 18px;
 	font-weight: bold;
 	letter-spacing: 1px;
-	transition: all .2s, margin .5s ease;
+	transition: all 0.2s, margin 0.5s ease;
 }
 
 .header::after {
@@ -109,7 +108,7 @@ a {
 	left: 50%;
 	background: var(--accent);
 	margin: 0px 0px 0px -222px;
-	opacity: .5;
+	opacity: 0.5;
 	border-radius: 10px;
 	z-index: -1;
 }
@@ -117,7 +116,7 @@ a {
 .header__weather,
 .header__greeting {
 	margin-bottom: 25px;
-	transition: opacity .5s ease;
+	transition: opacity 0.5s ease;
 }
 
 .hide-header-elements {
@@ -126,7 +125,9 @@ a {
 }
 
 .header__greeting-name,
-.header__weather-temp {color: var(--accent);}
+.header__weather-temp {
+	color: var(--accent);
+}
 
 .search-form {
 	position: absolute;
@@ -138,7 +139,7 @@ a {
 	justify-content: center;
 	width: 450px;
 	margin: 0px 0px 0px -225px;
-	transition: opacity .2s ease-out;
+	transition: opacity 0.2s ease-out;
 }
 
 .show-search {
@@ -165,9 +166,9 @@ a {
 	height: 35px;
 	outline: none;
 	border: 2px solid transparent;
-	border-radius: 0px 3px 3px 0px;	
+	border-radius: 0px 3px 3px 0px;
 	cursor: pointer;
-	transition: .3s;
+	transition: 0.3s;
 }
 
 .search-form__button:hover {
@@ -176,7 +177,7 @@ a {
 }
 
 @media screen and (max-width: 600px) {
-	.header h1{
+	.header h1 {
 		font-size: 30px;
 	}
 
@@ -213,13 +214,19 @@ a {
 
 .btn_theme,
 .btn_header,
-.btn_menu {padding: 5px 0;}
+.btn_menu {
+	padding: 5px 0;
+}
 
-.btn_theme {transform: rotate(-25deg);}
+.btn_theme {
+	transform: rotate(-25deg);
+}
 
 #chb_theme,
 #chb_header,
-#chb_menu {display: none;}
+#chb_menu {
+	display: none;
+}
 
 #chb_theme + label::before,
 #chb_theme + label:hover::before,
@@ -237,41 +244,59 @@ a {
 	font-weight: 900;
 	font-size: 22px;
 	cursor: pointer;
-	transition: .2s;
+	transition: 0.2s;
 }
 
 #chb_theme + label::before,
 #chb_theme + label:hover::before,
 #chb_theme:checked + label::before,
-#chb_theme:checked + label:hover::before {font-size: 20px;}
+#chb_theme:checked + label:hover::before {
+	font-size: 20px;
+}
 
-#chb_theme + label::before {content: "\f186";}
+#chb_theme + label::before {
+	content: '\f186';
+}
 
-#chb_header + label::before {content: "\f05a";}
+#chb_header + label::before {
+	content: '\f05a';
+}
 
-#chb_menu + label::before {content: "\f013";}
+#chb_menu + label::before {
+	content: '\f013';
+}
 
 #chb_theme + label::before,
 #chb_header + label::before,
-#chb_menu + label::before {color: var(--inactive-icon);}
+#chb_menu + label::before {
+	color: var(--inactive-icon);
+}
 
 #chb_theme:checked + label::before,
-#chb_theme:checked + label:hover::before {color: var(--theme-icon);}
+#chb_theme:checked + label:hover::before {
+	color: var(--theme-icon);
+}
 
 #chb_header:checked + label::before,
-#chb_header:checked + label:hover::before {color: var(--header-icon);}
+#chb_header:checked + label:hover::before {
+	color: var(--header-icon);
+}
 
 #chb_menu:checked + label::before,
-#chb_menu:checked + label:hover::before {color: var(--menu-icon);}
+#chb_menu:checked + label:hover::before {
+	color: var(--menu-icon);
+}
 
 #chb_theme + label:hover::before,
 #chb_header + label:hover::before,
 #chb_menu + label:hover::before,
 #chb_theme:checked + label:hover::before,
 #chb_header:checked + label:hover::before,
-#chb_menu:checked + label:hover::before {filter: brightness(.8);}
+#chb_menu:checked + label:hover::before {
+	filter: brightness(0.8);
+}
 
-input[type=text] {
+input[type='text'] {
 	height: 35px;
 	outline: none;
 	text-align: center;
@@ -279,5 +304,49 @@ input[type=text] {
 	background: var(--input);
 	color: var(--foreground);
 	border-radius: 3px;
-	transition: .3s;
+	transition: 0.3s;
 }
+
+@font-face {
+      font-family: 'clover';
+      src: url('../font/clover.ttf?51021000') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+     
+     
+    .icon-clover
+    {
+      font-family: "clover";
+      font-style: normal;
+      font-weight: normal;
+      speak: never;
+     
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
+      /* opacity: .8; */
+     
+      /* For safety - reset parent styles, that can break glyph codes*/
+      font-variant: normal;
+      text-transform: none;
+     
+      /* fix buttons height, for twitter bootstrap */
+      line-height: 1em;
+     
+      /* Animation center compensation - margins should be symmetric */
+      /* remove if not needed */
+      margin-left: .2em;
+     
+      /* You can be more comfortable with increased icons size */
+      /* font-size: 120%; */
+     
+      /* Font smoothing. That was taken from TWBS */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+     
+      /* Uncomment for 3D effect */
+      /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    }
