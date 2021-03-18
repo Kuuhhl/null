@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>~</title>
+		<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
+		<script src="scripts/transitions.js"></script>
+	</head>
+
+	<body>
+		<svg id="fader"></svg>
+        <script>fadeInPage();</script>
+
+		<!-- Welcome screen -->
+		<div id="main_window">
+                    <video autoplay loop id=leftImg src="assets/img/image.webm" class="image"></video>
+			<div id="content">
+				<h1 class="title">~/</h1>
+				<div id="date">
+					<script type="text/javascript">
+						function doDate() {
+							var str = "";
+							var months = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
+							var clock = new Date();
+							var now = new Date();
+
+							str += months[clock.getMonth()] + " " + now.getDate() + ", " + clock.getFullYear() + " | " + ("0" + now.getHours()).slice(-2) +":" + ("0" + now.getMinutes()).slice(-2) + ":" + ("0" + now.getSeconds()).slice(-2);
+							document.getElementById("date").innerHTML = str;
+						}
+						setInterval(doDate, 1000);
+						doDate();
+					</script>
+				</div>
+<!-- Links -->
+				<nav>
+					<div id=links_container>
+						<ul>
+							<p class="subtitle">frequent/</p>
+								<li><a href="https://www.youtube.com/">youtube</a></li>
+								<li><a href="https://www.github.com/">github</a></li>
+								<li><a href="https://www.reddit.com/">reddit</a></li>
+								<li><a href="https://www.4chan.org/g/">/g/</a></li>
+						</ul>
+						<ul>
+							<p class="subtitle">studies/</p>
+								<li><a href="https://moodle2.faust.fr.bw.schule.de/moodle/blocks/exa2fa/login/">moodle</a></li>
+								<li><a href="https://login.schulmanager-online.de/#/login">schulmanager</a></li>
+								<li><a href="https://cloud.faust-gymnasium.de/login">schulcloud</a></li>
+						</ul>
+						
+                                        </div>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<div class="bottom">
+				<span id="light-mode-toggle" class="light-mode-toggle">Switch themes</span>
+				</p>
+			</div>
+		</div>
+
+		<script src="scripts/darkmode.js"></script>
+	</body>
+</html>
